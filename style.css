@@ -276,3 +276,16 @@ select {
     pointer-events: none;
     
 }
+
+.footer {
+    z-index:-1;
+    position: fixed;
+    color: yellow;
+    animation: makeup;
+    border-radius: 20px;
+    border-top-left-radius: 20px ;
+    border-top-right-radius: 20px ;
+    border: 2px solid grey ;
+    background-color: transparent;
+    
+}
