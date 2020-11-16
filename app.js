@@ -59,3 +59,4 @@ else if (item.classList[0] === 'complete-btn'){
 }
 
 
+let onlineUsers = users.filter(user => user.online);
