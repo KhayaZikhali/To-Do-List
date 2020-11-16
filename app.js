@@ -57,6 +57,3 @@ else if (item.classList[0] === 'complete-btn'){
    todo.classList.toggle('completed');
  }
 }
-
-
-let onlineUsers = users.filter(user => user.online);
