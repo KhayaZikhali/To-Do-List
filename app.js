@@ -57,3 +57,7 @@ else if (item.classList[0] === 'complete-btn'){
    todo.classList.toggle('completed');
  }
 }
+
+// create a filter function for the element name todos
+// this is to filter out the tasks acording to the specified parameters
+ 

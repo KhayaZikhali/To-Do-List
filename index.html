@@ -39,7 +39,19 @@
         <option value="completed">COMPLETED</option>
     </select>
 </div>
+<!-- first bit of code using react -->
+<script>
+    class MyApp extends React.Component(){
+       constructor(props){
+           super(props);
+           this.state = {
+               divs = document.getElementsByClassName("todo")
 
+           }
+       }  
+    }
+
+</script>
 
 <button class="create" onclick="addTodo()" >
     CREATE
