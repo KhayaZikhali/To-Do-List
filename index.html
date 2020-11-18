@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img1.jpg" />
     <title> TO DO LIST</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -39,6 +40,7 @@
         <option value="completed">COMPLETED</option>
     </select>
 </div>
+
 <!-- first bit of code using react -->
 <script>
     class MyApp extends React.Component(){
@@ -46,12 +48,13 @@
            super(props);
            this.state = {
                divs = document.getElementsByClassName("todo")
-
            }
-       }  
-    }
+          
+        } 
 
+    }
 </script>
+
 
 <button class="create" onclick="addTodo()" >
     CREATE
