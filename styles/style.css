@@ -1,0 +1,308 @@
+body {
+  height: 500vh;
+  width: 100vw;
+  background-image: linear-gradient(125deg, #ffe677 30%, #ce6bff 100%);
+}
+
+/* banner */
+.banner {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 10vh;
+  color: royalblue;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: transparent;
+  text-align: end;
+  font-size: calc(2*2vw);
+  padding-top: 10px;
+}
+
+div .select {
+  z-index: -1;
+}
+
+button .create {
+  z-index: 1;
+}
+
+/*
+====================
+text input 
+====================
+input form  */
+.form {
+  font-size: 16;
+  width: 50%;
+  position: relative;
+  height: 60px;
+  overflow: hidden;
+  margin-top: -10px;
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  font-size: x-large;
+  background-color: transparent;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.form label::after {
+  content: "";
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-bottom: 5px solid blue;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/*  input name  */
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  bottom: 10px;
+  font-size: smaller;
+  left: 0px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#prod {
+  margin-top: 80px;
+  width: 400px;
+  margin-left: 34vw;
+}
+
+#notes {
+  margin-top: 30px;
+  width: 400px;
+  margin-left: 34vw;
+}
+
+/* 
+================
+CREATE BUTTON
+================
+*/
+.create {
+  display: block;
+  width: 10vw;
+  padding: 8px;
+  height: 40px;
+  color: white;
+  background-color: red;
+  border: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  -webkit-transition: 1s linear ease-in-out;
+  transition: 1s linear ease-in-out;
+  margin-left: 40rem;
+  margin-top: -3.5rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.create:hover {
+  cursor: pointer;
+}
+
+.create::after {
+  outline: 1px solid salmon;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  cursor: pointer;
+}
+
+/* ================
+ to do containers
+ ================ */
+.todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background-color: antiquewhite;
+  color: black;
+  margin-left: 30rem;
+  margin-right: 70rem;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.todo li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* ===================
+ TRASH BUTTONS
+=================== */
+.trash-btn, .complete-btn {
+  background-color: #18c718;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background-color: #791818;
+}
+
+.todo-item {
+  padding: .5rem;
+}
+
+.fa-trash, .fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  z-index: -3;
+}
+
+.fall {
+  -webkit-transform: translateY(8rem) rotateZ(20deg);
+          transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+footer {
+  width: 10vw;
+  height: 5vh;
+  background-color: green;
+  position: absolute;
+  bottom: 400vh;
+}
+
+/* ===================
+SELECT TAG
+=================== */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.select {
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+  overflow: visible;
+}
+
+select {
+  display: inline-block;
+  background-color: lightblue;
+  color: #d33;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  padding: 0.79rem;
+  margin-left: 28rem;
+  margin-top: 20px;
+}
+
+.select::after {
+  content: "\25BC";
+  margin-top: 20px;
+  padding: 10px;
+  position: absolute;
+  background: #b43;
+  top: 0px;
+  left: 6.7rem;
+  color: yellow;
+  margin-left: 41rem;
+  pointer-events: none;
+}
+
+.footer {
+  z-index: -1;
+  position: fixed;
+  color: yellow;
+  -webkit-animation: makeup;
+          animation: makeup;
+  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 2px solid grey;
+  background-color: transparent;
+}
+/*# sourceMappingURL=style.css.map */
