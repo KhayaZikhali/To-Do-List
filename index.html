@@ -13,6 +13,7 @@
 <body>
   <!-- banner atop the page -->
     <div class="banner">TO DO LIST</div>
+
      <!-- Project title input -->
     <div class="form"> 
       <input type="text" name="name" id="name" required/>
@@ -20,7 +21,8 @@
           <span class="content-name">NAME</span>
       </label>
   </div>
-  
+
+  <!-- task Name Input -->
   <div class="form" id="prod"> 
     <input type="text" name="task" id="task" required/>
     <label for="name" class="label-name">
@@ -28,6 +30,7 @@
     </label>
 </div>
 
+<!-- EXTRA NOTES DIV -->
 <div class="form" id="notes"> 
     <input type="text" name="notes" id="extra" required/>
     <label for="name" class="label-name">
@@ -44,17 +47,6 @@
 </div>
 
 <!-- first bit of code using react -->
-<script>
-    class MyApp extends React.Component(){
-       constructor(props){
-           super(props);
-           this.state = {
-               divs = document.getElementsByClassName("todo")
-           }
-          
-        } 
-    }
-</script>
 
 <button class="create" onclick="addTodo()" >
     CREATE
