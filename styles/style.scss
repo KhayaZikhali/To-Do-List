@@ -1,21 +1,18 @@
 body {
-    height:500vh;
-    width:100vw;
+    height:100vh;
+    width:100%;
     background-image:linear-gradient(125deg,
     #ffe677 30% ,
-    #ce6bff 100%);
+    #ce6bff 10%);
+    background-repeat:none ;
 }
 
 /* banner */
-
 .banner {
     display: block;
     position: absolute;
-    left:0px;
-    top:0px;
     width: 100vw;
     height: 10vh;
-    content: "TO DO LIST";
     color:royalblue;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color:transparent ;
@@ -24,9 +21,6 @@ body {
     padding-top: 10px;;
 }
 
-div .select {
-    z-index: -1;
-}
 
 button .create {
     z-index:1;
@@ -88,6 +82,7 @@ input form  */
     bottom:5px;
     left:0px;
     transition: all 0.1s ease;
+    width:200px;
     
 }
 
@@ -113,9 +108,9 @@ input form  */
 }
 
 #notes {
+    margin: auto auto;
     margin-top: 30px;
     width: 400px;
-    margin-left:34vw ;
 }
 
 /* 
@@ -126,7 +121,7 @@ CREATE BUTTON
 
 .create {
     display:block;
-    width: 10vw;
+    width: 200px;
     padding: 8px;
     height: 40px;
     color: white;
@@ -135,8 +130,9 @@ CREATE BUTTON
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     transition: 1s linear ease-in-out;
-    margin-left: 40rem;
+    transform: translate(50vw , 5%);
     margin-top: -3.5rem;
+    margin-left: 3.5rem;
     justify-self: center;
     cursor: pointer;
     z-index:1;
@@ -160,6 +156,7 @@ CREATE BUTTON
     display:flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5%;
 }
 
 .todo-list {
@@ -255,12 +252,10 @@ select {
     display: inline-block;
     background-color:lightblue;
     color: #d33;
-    width:fit-content;
+    width:200px;
     cursor: pointer;
     padding: 0.79rem;
-    margin-left: 28rem;
-    margin-top: 20px;
-
+    transform: translate(30vw , 5%);
 }
 
 .select::after {
@@ -273,8 +268,7 @@ select {
     left: 6.7rem;
     color:yellow;
     margin-left: 41rem;
-    pointer-events: none;
-    
+    pointer-events: none;    
 }
 
 .footer {
