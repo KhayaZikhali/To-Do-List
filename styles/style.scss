@@ -2,7 +2,7 @@ body {
     height:100vw;
     width:100vw;
     background-color:lightblue;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* banner */
@@ -48,7 +48,7 @@ input form  */
     background-color: red;
 }
 
-// NOTES c  
+// NOTES  
 
 .form label {
     position: absolute;
@@ -61,8 +61,6 @@ input form  */
     transition: all 2s ease-in-out;
 }
 
-
-
 /*  input name  */ 
 .content-name {
     position: absolute;
@@ -72,7 +70,6 @@ input form  */
     width:200px;   
 }
 
-// !ADDA MEDIA QUERY TO ACCOUNT FOR THE CHANGE IN SCREEN SIZE IN THE NAME DIV 
 //** CENTER ALL THE ELEMENTS WHEN THE SCREEN IS TABLET SIZE OR LESS
 
 .form input:focus + .label-name .content-name, 
@@ -154,7 +151,6 @@ CREATE BUTTON
     cursor: pointer;
 }
 
-
 /* ===================
 SELECT TAG
 =================== */
@@ -191,14 +187,19 @@ select {
 
 .todo-container {
     display:flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
     margin-top: 5%;
+    width:100vw;
+    left: 0%;
+    background-color: green;
+    position: relative;
 }
 
+
 .todo-list {
-    min-width: 50vw;
-    max-width: 51vw;
+    min-width: 100%;
     list-style: none;
 }
 
@@ -211,13 +212,9 @@ select {
     font-size: 1.5rem;
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     transition: all 0.4s ease;
-
 }
-
-
-
 /* ===================
  TRASH BUTTONS
 =================== */
@@ -237,7 +234,12 @@ select {
 }
 
 .todo-item {
+    display: flex;
+    flex-direction: column;
     padding: .5rem;
+    min-width: fit-content;
+    background-color: moccasin;
+    line-height: normal;
 }
 
 .fa-trash, .fa-check {
@@ -256,28 +258,22 @@ select {
 }
 
 footer {
-    width: 10vw;
-    height: 5vh;
+    width: 100vw;
+    height: 6vh;
     background-color: green;
     position: absolute;
-    bottom: 400vh;
- 
 }
-
-
 
 //** ADD STYLING FOR THE CONTAINER DIV THAT CONTAINS THE TASK AND ITS STATUS 
 
 
 .footer {
-    z-index:-1;
+    z-index:1;
     position: fixed;
     color: yellow;
     animation: makeup;
-    border-radius: 20px;
-    border-top-left-radius: 20px ;
-    border-top-right-radius: 20px ;
     border: 2px solid grey ;
-    background-color: transparent;
-    
+    background-color: goldenrod;
+    bottom: 0%;
+    left: 0%;
 }

@@ -2,7 +2,7 @@ body {
   height: 100vw;
   width: 100vw;
   background-color: lightblue;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* banner */
@@ -197,18 +197,25 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   margin-top: 5%;
+  width: 100vw;
+  left: 0%;
+  background-color: green;
+  position: relative;
 }
 
 .todo-list {
-  min-width: 50vw;
-  max-width: 51vw;
+  min-width: 100%;
   list-style: none;
 }
 
@@ -225,9 +232,9 @@ select {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -250,7 +257,19 @@ select {
 }
 
 .todo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: .5rem;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  background-color: moccasin;
+  line-height: normal;
 }
 
 .fa-trash, .fa-check {
@@ -270,23 +289,21 @@ select {
 }
 
 footer {
-  width: 10vw;
-  height: 5vh;
+  width: 100vw;
+  height: 6vh;
   background-color: green;
   position: absolute;
-  bottom: 400vh;
 }
 
 .footer {
-  z-index: -1;
+  z-index: 1;
   position: fixed;
   color: yellow;
   -webkit-animation: makeup;
           animation: makeup;
-  border-radius: 20px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   border: 2px solid grey;
-  background-color: transparent;
+  background-color: goldenrod;
+  bottom: 0%;
+  left: 0%;
 }
 /*# sourceMappingURL=style.css.map */
