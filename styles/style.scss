@@ -201,19 +201,20 @@ select {
 .todo-list {
     min-width: 100%;
     list-style: none;
+    color:blue;
 }
 
 .todo {
     margin:0.5rem;
-    background-color: antiquewhite;
+    background-color: white;
     color:black;
     margin-left: 30rem;
     margin-right: 70rem;
     font-size: 1.5rem;
     display:flex;
     justify-content: space-between;
-    align-items: left;
-    transition: all 0.4s ease;
+    align-items: center;
+    transition: all 0.4s ease-in;
 }
 /* ===================
  TRASH BUTTONS
