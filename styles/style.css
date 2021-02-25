@@ -1,8 +1,8 @@
 body {
-  height: 100%;
+  height: 100vw;
   width: 100vw;
   background-color: lightblue;
-  overflow: SCROLL;
+  overflow: hidden;
 }
 
 /* banner */
@@ -23,10 +23,6 @@ body {
           transform: translateX(65vw);
 }
 
-button .create {
-  z-index: 1;
-}
-
 /*
 ====================
 text input 
@@ -34,11 +30,14 @@ text input
 input form  */
 .form {
   font-size: 16;
-  width: 50%;
+  min-width: 200px;
+  max-width: 30vw;
   position: relative;
   height: 60px;
   overflow: hidden;
   margin-top: -10px;
+  -webkit-transform: translate(0%, 0);
+          transform: translate(0%, 0);
 }
 
 .form input {
@@ -48,8 +47,8 @@ input form  */
   padding-top: 20px;
   border: none;
   outline: none;
-  font-size: x-large;
-  background-color: transparent;
+  font-size: large;
+  background-color: red;
 }
 
 .form label {
@@ -62,21 +61,6 @@ input form  */
   border-bottom: 1px solid black;
   -webkit-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
-}
-
-.form label::after {
-  content: "";
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-bottom: 5px solid blue;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 /*  input name  */
@@ -115,9 +99,25 @@ input form  */
 }
 
 #notes {
-  margin: auto auto;
-  margin-top: 30px;
+  margin-top: 80px;
   width: 400px;
+  margin-left: 34vw;
+}
+
+@media only screen and (max-width: 600px) {
+  #prod {
+    margin-top: 80px;
+    min-width: 200px;
+    max-width: 45vw;
+    margin-left: 22vw;
+    font-size: calc(2*2vw);
+  }
+  #notes {
+    margin-top: 80px;
+    min-width: 200px;
+    margin-left: 22vw;
+    font-size: calc(2*2vw);
+  }
 }
 
 /* 
@@ -126,8 +126,8 @@ CREATE BUTTON
 ================
 */
 .create {
-  display: block;
-  width: 200px;
+  display: inline-block;
+  min-width: 20vw;
   padding: 8px;
   height: 40px;
   color: white;
@@ -137,14 +137,13 @@ CREATE BUTTON
   font-weight: bold;
   -webkit-transition: 1s linear ease-in-out;
   transition: 1s linear ease-in-out;
-  -webkit-transform: translate(50vw, 5%);
-          transform: translate(50vw, 5%);
-  margin-top: -3.5rem;
-  margin-left: 3.5rem;
+  -webkit-transform: translate(30vw, 0%);
+          transform: translate(30vw, 0%);
   -ms-grid-column-align: center;
       justify-self: center;
   cursor: pointer;
   z-index: 1;
+  margin-top: 2vh;
 }
 
 .create:hover {
@@ -156,6 +155,39 @@ CREATE BUTTON
   -webkit-transition: 1s ease-in;
   transition: 1s ease-in;
   cursor: pointer;
+}
+
+/* ===================
+SELECT TAG
+=================== */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.select {
+  display: inline-block;
+  position: relative;
+  overflow: visible;
+}
+
+select {
+  display: inline-block;
+  background-color: blue;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #d33;
+  width: 20vw;
+  cursor: pointer;
+  padding: 0.79rem;
+  -webkit-transform: translate(28vw, 0%);
+          transform: translate(28vw, 0%);
 }
 
 /* ================
@@ -175,7 +207,8 @@ CREATE BUTTON
 }
 
 .todo-list {
-  min-width: 50%;
+  min-width: 50vw;
+  max-width: 51vw;
   list-style: none;
 }
 
@@ -197,12 +230,6 @@ CREATE BUTTON
           align-items: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
-
-.todo li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 /* ===================
@@ -248,50 +275,6 @@ footer {
   background-color: green;
   position: absolute;
   bottom: 400vh;
-}
-
-/* ===================
-SELECT TAG
-=================== */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: none;
-}
-
-.select {
-  display: inline-block;
-  margin: 1rem;
-  position: relative;
-  overflow: visible;
-}
-
-select {
-  display: inline-block;
-  background-color: lightblue;
-  color: #d33;
-  width: 200px;
-  cursor: pointer;
-  padding: 0.79rem;
-  -webkit-transform: translate(30vw, 5%);
-          transform: translate(30vw, 5%);
-}
-
-.select::after {
-  content: "\25BC";
-  margin-top: 20px;
-  padding: 10px;
-  position: absolute;
-  background: #b43;
-  top: 0px;
-  left: 6.7rem;
-  color: yellow;
-  margin-left: 41rem;
-  pointer-events: none;
 }
 
 .footer {
