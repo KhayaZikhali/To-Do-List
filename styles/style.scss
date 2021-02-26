@@ -1,8 +1,14 @@
 body {
     height:100vw;
     width:100vw;
-    background-color:lightblue;
+    background-color:whitesmoke;
     overflow-x: hidden;
+    left: 0%;
+    background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
+    background-clip: content-box;
+    -webkit-background-clip: content-box;
+    color:blue;
+    background-repeat: no-repeat;
 }
 
 /* banner */
@@ -17,7 +23,11 @@ body {
     text-align: end;
     font-size: calc(3*2vw);
     padding-top: 10px;
-    transform: translateX(65vw);
+    transform: translateX(calc(76vw - calc(6*2vw)));
+    background-image: linear-gradient(-225deg, #FF3CAC -20%, #562B7C 52%, #2B86C5 100%);
+    background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
 }
 
 /*
@@ -45,7 +55,7 @@ input form  */
     border:none;
     outline: none;
     font-size: large;
-    background-color: red;
+    background-color: transparent;
 }
 
 // NOTES  
@@ -128,8 +138,10 @@ CREATE BUTTON
     min-width:20vw;
     padding: 8px;
     height: 40px;
-    color: white;
-    background-color: red;
+    color: rgb(46, 45, 45);
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px 5px  rgb(46, 45, 45);
+    border-radius: 15px ;
     border :none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
@@ -149,6 +161,10 @@ CREATE BUTTON
     outline: 1px solid salmon;
     transition: 1s ease-in;
     cursor: pointer;
+}
+
+.create:focus {
+     outline: none;
 }
 
 /* ===================
@@ -172,8 +188,11 @@ select {
 
 select {
     display: inline-block;
-    background-color:blue;
+    background-color:blueviolet;
+    border-radius: 100px ;
     align-self: center;
+    align-items: center;
+    text-align: center;
     color: #d33;
     width:20vw;
     cursor: pointer;
@@ -189,31 +208,35 @@ select {
     display:flex;
     flex-direction: row;
     justify-content: left;
-    align-items: left;
+    align-items: center;
     margin-top: 5%;
-    width:100vw;
-    left: 0%;
-    background-color: green;
+    min-width:50vw;
+    left: 25%;
     position: relative;
 }
 
+// media query with the container being a set width at mobile phones
 
 .todo-list {
-    min-width: 100%;
+    min-width:60%;
     list-style: none;
     color:blue;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .todo {
     margin:0.5rem;
-    background-color: white;
     color:black;
-    margin-left: 30rem;
     margin-right: 70rem;
     font-size: 1.5rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    justify-self: center;
+    transform: translate(50%, 0%);
     transition: all 0.4s ease-in;
 }
 /* ===================
@@ -226,8 +249,11 @@ select {
      border:none;
      outline: none;
      padding: 1rem;
+     height: 50px;
+     width: 100px;
      cursor: pointer;
-     font-size: 1rem;
+     margin-left: 8px;
+     border-radius: 50%;
 }
 
 .complete-btn {
@@ -239,8 +265,10 @@ select {
     flex-direction: column;
     padding: .5rem;
     min-width: fit-content;
+    font-size: calc(90%);
     background-color: moccasin;
-    line-height: normal;
+    white-space: nowrap;
+    height: 5vh;
 }
 
 .fa-trash, .fa-check {
@@ -258,23 +286,6 @@ select {
     opacity: 0;
 }
 
-footer {
-    width: 100vw;
-    height: 6vh;
-    background-color: green;
-    position: absolute;
-}
+
 
 //** ADD STYLING FOR THE CONTAINER DIV THAT CONTAINS THE TASK AND ITS STATUS 
-
-
-.footer {
-    z-index:1;
-    position: fixed;
-    color: yellow;
-    animation: makeup;
-    border: 2px solid grey ;
-    background-color: goldenrod;
-    bottom: 0%;
-    left: 0%;
-}
