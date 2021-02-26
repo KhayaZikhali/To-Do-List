@@ -58,10 +58,6 @@ else if (item.classList[0] === 'complete-btn'){
  }
 }
 
-// create a filter function for the element name todos
-// this is to filter out the tasks acording to the specified parameters
- 
 
-window.addEventListener("resize",()=>{
-   console.log(window.innerWidth)
-} )
+//Create a filter funtion to makes use of the select button
+//Store all the data somewhere  
